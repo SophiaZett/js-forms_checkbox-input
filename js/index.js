@@ -26,11 +26,15 @@ form.addEventListener("submit", (event) => {
 
   // --v-- write your code here --v--
 if (tosCheckbox.checked) {
-  success.style.visibility = "visible";
+  hideTosError();
+  success.removeAttribute("hidden");
+  alert("Form submitted");
   return;
-}
+} 
+showTosError();
+success.setAttribute("hidden", "");
   // --^-- write your code here --^--
 
   // eslint-disable-next-line no-alert
-  alert("Form submitted");
+  
 });
